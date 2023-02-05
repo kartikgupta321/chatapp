@@ -3,7 +3,9 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import {View,ActivityIndicator} from 'react-native';
 import { onAuthStateChanged } from "firebase/auth";
-import { auth } from './config/firebase';
+import { auth } from './config/firebase';import { LogBox } from 'react-native';
+LogBox.ignoreLogs(['Warning: ...']); // Ignore log notification by message
+LogBox.ignoreAllLogs();//Ignore all log notifications
 
 import Chat from "./screens/Chat";
 import Login from "./screens/Login";
